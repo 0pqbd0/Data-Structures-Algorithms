@@ -1,8 +1,7 @@
 func missingNumber(nums []int) int {
-    sum1, sum2 := 0, 0
-    for i:= 1; i <= len(nums); i++ {
-        sum1 += nums[i - 1]
-        sum2 += i
+    sum := 0
+    for i:= 0; i < len(nums); i++ {
+        sum += nums[i]
     }
-    return sum2 - sum1
+    return (len(nums) * (len(nums) + 1)) / 2 - sum
 }
